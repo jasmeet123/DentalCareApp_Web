@@ -1,0 +1,17 @@
+
+*.xml
+
+*.pyc
+
+*.pyc
+
+UserRequest/migrations/__init__.pyc
+
+dentist_login/migrations/0001_initial.pyc
+
+*/.xml
+*/.pyc
+
+*.iml
+
+UserRequest/migrations/__init__.pyc

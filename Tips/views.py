@@ -9,7 +9,7 @@ from .serializer import TipsSerializer
 
 
 class TipViewSet(ListCreateAPIView):
-    authentication_classes = (authentication.TokenAuthentication,)
+    authentication_classes = (authentication.TokenAuthentication,authentication.BasicAuthentication,)
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,isOwnerOrReadOnly)
     queryset = Tip.objects.all().order_by('-date')
     serializer_class = TipsSerializer
