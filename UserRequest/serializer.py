@@ -4,7 +4,7 @@ from .models import Request
 class UserRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Request
-        fields = ('request_title','request_desc','request_user','request_dentist')
+        fields = ('request_title','request_desc','request_user','request_dentist', 'request_date')
 
     def update(self, instance, validated_data):
 

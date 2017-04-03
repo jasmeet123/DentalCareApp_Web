@@ -60,8 +60,12 @@ class FacebookLoginOrSignup(APIView):
     def put(self,request,pk):
         user = UserLogin.objects.all().get(pk=pk)
         data = JSONParser().parse(request)
-        user.zip = data.get('zip','')
-        user.email = data.get('email','')
+        user.zip = data.get('zip',user.zip)
+        user.email = data.get('email',user.email)
+        user.age = data.get('age',user.age)
+        user.city = data.get('city',user.city)
+        user.state = data.get('state',user.state)
+        user.country = data.get('country',user.country)
         user.save()
         return Response(status=200 ,data={
                          'success': True,
@@ -153,4 +157,4 @@ class UserLogout (APIView):
     #             'success': False,
     #             'reason': "Bad  Token",
     #         })
-    #
+    #/Users/jasmeetsingh/DentalCareAPP_PROD/DentalCareApp_Web

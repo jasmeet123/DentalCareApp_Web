@@ -140,7 +140,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'admin@dentalcareapp.com'
+EMAIL_HOST_USER = 'support@dentalcareapp.com'
 EMAIL_HOST_PASSWORD = 'Waheguru1'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

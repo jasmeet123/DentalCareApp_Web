@@ -1,7 +1,8 @@
-
+import sys
 import sqlalchemy
 import math
 import MySQLdb
+
 
 
 
@@ -55,7 +56,7 @@ def haversine(lat1, long1, lat2, long2):
 
 
 if __name__ == "__main__":
-    import sys
+
     try:
         print "Distance in miles: %.2f" % distance(sys.argv[1], sys.argv[2])
     except IndexError:

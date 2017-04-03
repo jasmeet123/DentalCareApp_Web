@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from dentist_login.models import Dentist
+from datetime import date
 
 
 class Request(models.Model):
@@ -10,6 +11,7 @@ class Request(models.Model):
     request_desc = models.CharField(max_length=1500)
     request_user  = models.EmailField(max_length=50)
     request_dentist = models.ForeignKey(Dentist, default= "", null= True)
+    request_date  = models.DateField(default=date.today())
 
     # owner = models.ForeignKey('User', blank=True, null=True, related_name='tips')
 
